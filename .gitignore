@@ -83,3 +83,19 @@ env/
 
 # Conda environments
 .conda/
+photo_caption_env/
+
+# Editor directories and files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# macOS specific
+.DS_Store
+
+# Log files
+*.log
+
+# SQLAlchemy Migrations
+alembic/versions/*.pyc
