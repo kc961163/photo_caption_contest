@@ -2,20 +2,13 @@
 
 repos:
   - repo: https://github.com/psf/black
-    rev: 23.3.0  # Use the latest stable version
+    rev: 23.3.0  # This should match the latest stable version
     hooks:
       - id: black
-        language_version: python3.10
-
-  # - repo: https://gitlab.com/pycqa/flake8
-  #   rev: 6.0.0  # Use the latest stable version
-  #   hooks:
-  #     - id: flake8
-  #       additional_dependencies: [flake8==6.0.0]
-  #       args: [--max-line-length=88]
+        args: ["--line-length=88"]  # Ensure the line-length is set appropriately
 
   - repo: https://github.com/PyCQA/isort
-    rev: 5.12.0  # Use the latest stable version
+    rev: 5.12.0  # Version of isort
     hooks:
       - id: isort
-        language_version: python3.10
+        args: ["--profile", "black", "--line-length=88"]  # Align with black
