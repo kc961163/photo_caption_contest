@@ -1,8 +1,8 @@
-# app/dependencies.py
+# api/utils/dependencies.py
 
 from sqlalchemy.orm import Session
 
-from .database import SessionLocal
+from api.database.database import SessionLocal  # Absolute import
 
 
 def get_db():

@@ -1,4 +1,4 @@
-# app/schemas.py
+# api/auth/schemas.py
 
 from typing import Optional
 
@@ -19,7 +19,7 @@ class UserOut(UserBase):
     is_admin: Optional[bool] = False
 
     class Config:
-        from_attributes = True
+        orm_mode = True
 
 
 class Token(BaseModel):
